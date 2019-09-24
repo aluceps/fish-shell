@@ -6,13 +6,14 @@
 # $ convert_to_gif {filename}.mp4
 function convert_to_gif -d "Create gif from movie"
 	set default_size 320
-	if [ (count $argv) -gt 1 ]
-		if [ $argv[1] = "--scale" ]
-			set size $argv[2]
-			set path $argv[3]
-			ffmpeg -filter_complex "[0:v] fps=30,scale=$size:-1,split [a][b];[a] palettegen [p];[b][p] paletteuse=dither=none" $path.gif -i $path
-		end
-	else
-		ffmpeg -filter_complex "[0:v] fps=30,scale=$default_size:-1,split [a][b];[a] palettegen [p];[b][p] paletteuse=dither=none" $argv.gif -i $argv
-	end
+	set default_fps 16
+	# if [ (count $argv) -gt 1 ]
+	# 	if [ $argv[1] = "--scale" ]
+	# 		set size $argv[2]
+	# 		set path $argv[3]
+	# 		ffmpeg -filter_complex "[0:v] fps=$default_fps,scale=$size:-1,split[a][b];[a]palettegen[pal];[b][pal]paletteuse" $path.gif -i $path
+	# 	end
+	# else
+		ffmpeg -filter_complex "[0:v] fps=$default_fps,scale=$default_size:-1,split[a][b];[a]palettegen[pal];[b][pal]paletteuse" $argv.gif -i $argv
+	# end
 end
