@@ -4,4 +4,5 @@ function peco_select_ghq_list
   if [ $selected ]
     cd $selected
   end
+  commandline -f repaint
 end

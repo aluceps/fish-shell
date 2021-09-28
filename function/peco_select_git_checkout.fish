@@ -6,4 +6,5 @@ function peco_select_git_checkout
 	if [ $branch_name ]
 		git checkout $branch_name
 	end
+	commandline -f repaint
 end
