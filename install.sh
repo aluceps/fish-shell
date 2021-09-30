@@ -1,7 +1,7 @@
-cp -p function/peco_select_ghq_list.fish ~/.config/fish/functions/peco_select_ghq_list.fish
-cp -p function/peco_select_git_checkout.fish ~/.config/fish/functions/peco_select_git_checkout.fish
-cp -p function/convert_to_gif.fish ~/.config/fish/functions/convert_to_gif.fish
+cp -p function/ghq_select_repository.fish ~/.config/fish/functions/
+cp -p function/ghq_select_branch.fish ~/.config/fish/functions/
+cp -p function/convert_to_gif.fish ~/.config/fish/functions/
 
-echo 'alias gl="peco_select_ghq_list"' >> ~/.config/fish/config.fish
-echo 'alias gc="peco_select_git_checkout"' >> ~/.config/fish/config.fish
+echo 'alias gl="ghq_select_repository"' >> ~/.config/fish/config.fish
+echo 'alias gc="ghq_select_branch"' >> ~/.config/fish/config.fish
 echo 'alias convert_to_gif="convert_to_gif"' >> ~/.config/fish/config.fish

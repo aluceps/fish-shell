@@ -1,4 +1,4 @@
-function peco_select_vagrant_global_status
+function select_vagrant_global_status
 	vagrant global-status | peco --layout bottom-up | awk '{print $1}' | read line
 	if [ "$line" != "" ] and [[ "$line" =~ "[a-z0-9]{5,5}" ]]
 		if [ "$argv" = "ssh" ];
