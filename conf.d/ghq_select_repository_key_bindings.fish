@@ -1,0 +1,1 @@
+bind \cl 'peco_select_ghq_list'
