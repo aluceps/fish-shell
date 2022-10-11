@@ -1,0 +1,1 @@
+bind \cb 'peco_select_git_checkout'
