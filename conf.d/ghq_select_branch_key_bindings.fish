@@ -1,1 +1,0 @@
-bind \cb 'ghq_select_branch'

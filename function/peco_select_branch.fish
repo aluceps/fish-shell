@@ -1,4 +1,4 @@
-function ghq_select_branch
+function peco_select_branch
 	set peco_flags --layout=bottom-up
 	git branch | peco $peco_flags | read selected
 
